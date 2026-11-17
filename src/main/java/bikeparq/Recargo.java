@@ -12,6 +12,10 @@ public final class Recargo {
 
     public static int aplicarRecargoNocturno(int tarifa, int horaEntrada) {
 
+        if  (tarifa == 0)   {
+             return 0;
+        }
+
          if (horaEntrada >= HORA_INICIO_NOCTURNO || horaEntrada <= ULTIMA_HORA_NOCTURNA) {
 
              return tarifa + MONTO_RECARGO_NOCTURNO;
