@@ -20,7 +20,7 @@ class RecargoTest {
     }
 
     @Test
-    
+
     void aLasDiecinueveTodaviaSeCobraLaTarifaNormal() {
 
            assertEquals(3000, Recargo.aplicarRecargoNocturno(3000, 19));
@@ -31,5 +31,12 @@ class RecargoTest {
 
 
         assertEquals(5000, Recargo.aplicarRecargoNocturno(3000, 20));
+    }
+    @Test
+    
+    void noSeCobraRecargoDuranteElTiempoDeGracia() {
+
+
+        assertEquals(0, Recargo.aplicarRecargoNocturno(0, 23));
     }
 }
